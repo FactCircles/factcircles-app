@@ -1,0 +1,107 @@
+{
+  "expo": {
+    "name": "FactCircles",
+    "slug": "factcircles",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "scheme": "factcircles",
+    "userInterfaceStyle": "automatic",
+    "splash": {
+      "image": "./assets/splash.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#0A1628"
+    },
+    "assetBundlePatterns": ["**/*"],
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.factcircles.app",
+      "buildNumber": "1",
+      "infoPlist": {
+        "NSContactsUsageDescription": "FactCircles needs access to your contacts to invite participants to a session.",
+        "NSCameraUsageDescription": "FactCircles needs camera access for video sessions.",
+        "NSMicrophoneUsageDescription": "FactCircles needs microphone access for voice sessions.",
+        "NSPhotoLibraryUsageDescription": "FactCircles needs photo library access for your profile photo.",
+        "NSUserTrackingUsageDescription": "FactCircles uses this to improve your experience.",
+        "ITSAppUsesNonExemptEncryption": false,
+        "UIBackgroundModes": ["audio", "fetch", "remote-notification"]
+      },
+      "entitlements": {
+        "com.apple.developer.in-app-payments": ["merchant.com.factcircles.app"],
+        "com.apple.developer.contacts.notes": true
+      },
+      "associatedDomains": ["applinks:factcircles.com"],
+      "privacyManifests": {
+        "NSPrivacyAccessedAPITypes": [
+          {
+            "NSPrivacyAccessedAPIType": "NSPrivacyAccessedAPICategoryUserDefaults",
+            "NSPrivacyAccessedAPITypeReasons": ["CA92.1"]
+          }
+        ]
+      }
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/adaptive-icon.png",
+        "backgroundColor": "#0A1628"
+      },
+      "package": "com.factcircles.app",
+      "versionCode": 1,
+      "permissions": [
+        "android.permission.READ_CONTACTS",
+        "android.permission.CAMERA",
+        "android.permission.RECORD_AUDIO",
+        "android.permission.INTERNET",
+        "android.permission.VIBRATE"
+      ],
+      "googleServicesFile": "./google-services.json"
+    },
+    "web": {
+      "bundler": "metro",
+      "output": "static",
+      "favicon": "./assets/favicon.png"
+    },
+    "plugins": [
+      "expo-router",
+      "expo-font",
+      [
+        "expo-contacts",
+        {
+          "contactsPermission": "FactCircles needs access to your contacts to invite participants."
+        }
+      ],
+      [
+        "expo-camera",
+        {
+          "cameraPermission": "FactCircles needs camera access for video sessions.",
+          "microphonePermission": "FactCircles needs microphone access for voice sessions."
+        }
+      ],
+      [
+        "expo-notifications",
+        {
+          "icon": "./assets/notification-icon.png",
+          "color": "#4A90D9",
+          "defaultChannel": "factcircles"
+        }
+      ],
+      [
+        "@stripe/stripe-react-native",
+        {
+          "merchantIdentifier": "merchant.com.factcircles.app"
+        }
+      ]
+    ],
+    "experiments": {
+      "typedRoutes": true
+    },
+    "extra": {
+      "eas": {
+        "projectId": "YOUR_EAS_PROJECT_ID_HERE"
+      },
+      "router": {
+        "origin": false
+      }
+    }
+  }
+}
