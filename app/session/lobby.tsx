@@ -1,5 +1,5 @@
 // app/session/lobby.tsx
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import {
   View, Text, StyleSheet, ScrollView, TouchableOpacity, Animated,
 } from 'react-native';
@@ -26,9 +26,6 @@ export default function LobbyScreen() {
   const [loadingAnnouncement, setLoadingAnnouncement] = useState(false);
   const [readyToStart, setReadyToStart] = useState(false);
   const pulseAnim = useRef(new Animated.Value(1)).current;
-
-  // Import useRef
-  const useRef = React.useRef;
 
   useEffect(() => {
     loadOpening();
