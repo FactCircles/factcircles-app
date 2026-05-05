@@ -69,7 +69,7 @@
         "android.permission.INTERNET",
         "android.permission.VIBRATE",
         "android.permission.WRITE_CONTACTS"
-      ],
+      ]
     },
     "web": {
       "bundler": "metro",
@@ -118,6 +118,6 @@
         "origin": false
       }
     },
-    "owner": "factcircles"
+    "owner": "factcircles-dev"
   }
 }
