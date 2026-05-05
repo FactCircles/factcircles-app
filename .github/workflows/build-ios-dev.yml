@@ -1,6 +1,9 @@
 name: iOS Development Build
 
 on:
+  push:
+    branches:
+      - develop
   workflow_dispatch:
 
 jobs:

@@ -12,7 +12,7 @@
       }
     },
     "preview": {
-      "distribution": "internal",
+      "distribution": "store",
       "ios": {
         "simulator": false,
         "resourceClass": "m-medium"
@@ -30,6 +30,13 @@
     }
   },
   "submit": {
+    "preview": {
+      "ios": {
+        "appleId": "YOUR_APPLE_ID@email.com",
+        "ascAppId": "YOUR_APP_STORE_CONNECT_APP_ID",
+        "appleTeamId": "YOUR_APPLE_TEAM_ID"
+      }
+    },
     "production": {
       "ios": {
         "appleId": "YOUR_APPLE_ID@email.com",

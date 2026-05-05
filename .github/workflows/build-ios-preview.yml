@@ -1,15 +1,14 @@
-name: iOS Preview Build
+name: iOS TestFlight Build
 
 on:
   push:
     branches:
       - main
-      - develop
   workflow_dispatch:
 
 jobs:
   build:
-    name: Build iOS Preview
+    name: Build & Submit iOS to TestFlight
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -32,3 +31,6 @@ jobs:
 
       - name: Build iOS (preview)
         run: eas build --platform ios --profile preview --non-interactive
+
+      - name: Submit to TestFlight
+        run: eas submit --platform ios --profile preview --non-interactive --latest

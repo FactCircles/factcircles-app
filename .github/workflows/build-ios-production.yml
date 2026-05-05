@@ -9,7 +9,7 @@ on:
       submit:
         description: 'Submit to App Store after build?'
         required: false
-        default: 'false'
+        default: false
         type: boolean
 
 jobs:
