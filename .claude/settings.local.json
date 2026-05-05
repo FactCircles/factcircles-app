@@ -3,7 +3,10 @@
     "allow": [
       "Bash(npm install *)",
       "Bash(npm view *)",
-      "Bash(npx expo *)"
+      "Bash(npx expo *)",
+      "Bash(cp /Users/ves00271/Documents/freelance/factcircles-app/AppIcons/Assets.xcassets/AppIcon.appiconset/1024.png /Users/ves00271/Documents/freelance/factcircles-app/assets/icon.png)",
+      "Bash(cp /Users/ves00271/Documents/freelance/factcircles-app/AppIcons/Assets.xcassets/AppIcon.appiconset/1024.png /Users/ves00271/Documents/freelance/factcircles-app/assets/adaptive-icon.png)",
+      "Read(//Users/ves00271/Downloads/AppIcons \\(1\\)/**)"
     ]
   }
 }
