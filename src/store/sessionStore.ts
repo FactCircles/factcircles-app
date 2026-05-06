@@ -1,15 +1,15 @@
 // src/store/sessionStore.ts
-import { create } from 'zustand';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import { v4 as uuidv4 } from 'uuid';
+import { create } from 'zustand';
 import {
-  Session,
+  Badge,
   Participant,
-  SessionPhase,
   PaymentSplit,
   QuestionKey,
   SavedSession,
-  Badge,
+  Session,
+  SessionPhase,
 } from '../utils/types';
 
 interface SessionStore {

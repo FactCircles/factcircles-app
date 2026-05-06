@@ -1,10 +1,10 @@
 // app/_layout.tsx
-import 'react-native-get-random-values';
-import { useEffect } from 'react';
 import { Stack } from 'expo-router';
 import { StatusBar } from 'expo-status-bar';
-import { GestureHandlerRootView } from 'react-native-gesture-handler';
+import { useEffect } from 'react';
 import { StyleSheet } from 'react-native';
+import { GestureHandlerRootView } from 'react-native-gesture-handler';
+import 'react-native-get-random-values';
 import { useSessionStore } from '../src/store/sessionStore';
 
 export default function RootLayout() {

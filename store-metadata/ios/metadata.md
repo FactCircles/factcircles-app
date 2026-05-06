@@ -21,7 +21,7 @@ WHAT IS A FACTCIRCLE?
 FactCircles is based on the restorative justice principles from "Live Connected" by John Richards. Instead of adversarial processes that create winners and losers, FactCircles creates a safe, structured space where everyone is heard — and a genuine solution is found.
 
 HOW IT WORKS
-1. Start a session and invite participants by name, phone, or social media
+1. Start a session and invite participants by name or phone contact
 2. Grok AI guides everyone through three powerful questions:
    • "What happened?"
    • "Who is affected?"
@@ -73,7 +73,7 @@ https://factcircles.com
 https://factcircles.com/privacy
 
 ## Copyright
-Copyright © 2024 FactCircles Inc. All rights reserved.
+Copyright © 2026 FactCircles Inc. All rights reserved.
 
 ## Version Release Notes (v1.0.0)
 Initial release of FactCircles — AI-powered conflict resolution.
@@ -84,22 +84,8 @@ Initial release of FactCircles — AI-powered conflict resolution.
 • Contact import for participant invitations
 
 ## Review Notes for Apple
-Test Account:
 - The app uses Grok AI (xAI) for session facilitation
 - Payment processing uses Stripe in test mode for review
 - Contacts permission is optional — app functions fully without it
-- Camera/microphone permissions are requested only if video is initiated
+- No account or login required to use the app
 
-## Screenshot Requirements (generated separately)
-Required sizes:
-- 6.9" (iPhone 16 Pro Max): 1320 × 2868
-- 6.5" (iPhone 15 Plus):    1284 × 2778  
-- 5.5" (iPhone 8 Plus):     1242 × 2208
-- iPad Pro 12.9" (6th gen): 2048 × 2732
-
-Suggested screenshots:
-1. Home screen — "FactCircles: Live Connected" hero
-2. Session setup — "Start a FactCircle in seconds"
-3. Questions screen — rotating icon + Grok prompt
-4. Solutions screen — Grok summary + recommended solution
-5. Badges screen — milestone rewards

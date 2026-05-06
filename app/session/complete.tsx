@@ -1,17 +1,21 @@
 // app/session/complete.tsx
-import React, { useEffect, useRef } from 'react';
-import {
-  View, Text, StyleSheet, ScrollView, Animated,
-} from 'react-native';
-import { router } from 'expo-router';
-import { SafeAreaView } from 'react-native-safe-area-context';
-import { LinearGradient } from 'expo-linear-gradient';
 import { Ionicons } from '@expo/vector-icons';
 import * as Haptics from 'expo-haptics';
-import { useSessionStore } from '../../src/store/sessionStore';
-import { Button } from '../../src/components/ui';
+import { LinearGradient } from 'expo-linear-gradient';
+import { router } from 'expo-router';
+import React, { useEffect, useRef } from 'react';
+import {
+  Animated,
+  ScrollView,
+  StyleSheet,
+  Text,
+  View,
+} from 'react-native';
+import { SafeAreaView } from 'react-native-safe-area-context';
 import FactCirclesIcon from '../../src/components/FactCirclesIcon';
-import { Colors, Fonts, Spacing, Radius } from '../../src/utils/theme';
+import { Button } from '../../src/components/ui';
+import { useSessionStore } from '../../src/store/sessionStore';
+import { Colors, Fonts, Radius, Spacing } from '../../src/utils/theme';
 
 export default function CompleteScreen() {
   const session = useSessionStore((s) => s.session);

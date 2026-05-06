@@ -1,12 +1,16 @@
 // app/(tabs)/badges.tsx
-import React, { useRef, useEffect } from 'react';
+import { LinearGradient } from 'expo-linear-gradient';
+import React, { useEffect, useRef } from 'react';
 import {
-  View, Text, StyleSheet, ScrollView, Animated,
+  Animated,
+  ScrollView,
+  StyleSheet,
+  Text,
+  View,
 } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
-import { LinearGradient } from 'expo-linear-gradient';
 import { useSessionStore } from '../../src/store/sessionStore';
-import { Colors, Fonts, Spacing, Radius } from '../../src/utils/theme';
+import { Colors, Fonts, Radius, Spacing } from '../../src/utils/theme';
 import { Badge } from '../../src/utils/types';
 
 export default function BadgesScreen() {

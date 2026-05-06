@@ -1,18 +1,16 @@
 // src/components/ui.tsx
+import { LinearGradient } from 'expo-linear-gradient';
 import React from 'react';
 import {
-  View,
-  Text,
-  TouchableOpacity,
-  StyleSheet,
   ActivityIndicator,
+  StyleSheet,
+  Text,
   TextInput,
-  ScrollView,
-  ViewStyle,
-  TextStyle,
+  TouchableOpacity,
+  View,
+  ViewStyle
 } from 'react-native';
-import { LinearGradient } from 'expo-linear-gradient';
-import { Colors, Fonts, Spacing, Radius, Shadows } from '../utils/theme';
+import { Colors, Fonts, Radius, Shadows, Spacing } from '../utils/theme';
 
 // ─── Button ──────────────────────────────────────────────────────────────────
 interface ButtonProps {

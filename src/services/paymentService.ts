@@ -1,5 +1,4 @@
 // src/services/paymentService.ts
-import { Alert } from 'react-native';
 
 const SESSION_PRICE_CENTS = 3000; // $30.00
 

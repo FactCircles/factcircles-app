@@ -1,18 +1,22 @@
 // app/session/solutions.tsx
-import React, { useState, useEffect } from 'react';
-import {
-  View, Text, StyleSheet, ScrollView, TouchableOpacity, Alert, Animated,
-} from 'react-native';
-import { router } from 'expo-router';
-import { SafeAreaView } from 'react-native-safe-area-context';
 import { Ionicons } from '@expo/vector-icons';
 import { LinearGradient } from 'expo-linear-gradient';
-import { useSessionStore } from '../../src/store/sessionStore';
+import { router } from 'expo-router';
+import React, { useEffect, useState } from 'react';
+import {
+  Alert, Animated,
+  ScrollView,
+  StyleSheet,
+  Text,
+  View
+} from 'react-native';
+import { SafeAreaView } from 'react-native-safe-area-context';
+import FactCirclesIcon from '../../src/components/FactCirclesIcon';
+import { Button, GrokBubble, PhaseIndicator } from '../../src/components/ui';
 import { generateSolutionSummary, generateThankYou } from '../../src/services/grokService';
 import { confirmPayment } from '../../src/services/paymentService';
-import { Button, GrokBubble, PhaseIndicator } from '../../src/components/ui';
-import FactCirclesIcon from '../../src/components/FactCirclesIcon';
-import { Colors, Fonts, Spacing, Radius } from '../../src/utils/theme';
+import { useSessionStore } from '../../src/store/sessionStore';
+import { Colors, Fonts, Radius, Spacing } from '../../src/utils/theme';
 
 export default function SolutionsScreen() {
   const session = useSessionStore((s) => s.session);

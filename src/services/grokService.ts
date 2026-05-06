@@ -1,5 +1,5 @@
 // src/services/grokService.ts
-import { GrokMessage, Participant, QuestionKey, Session } from '../utils/types';
+import { Participant, QuestionKey, Session } from '../utils/types';
 
 const GROK_API_URL = process.env.EXPO_PUBLIC_GROK_API_URL || 'https://api.x.ai/v1';
 const GROK_API_KEY = process.env.EXPO_PUBLIC_GROK_API_KEY || '';

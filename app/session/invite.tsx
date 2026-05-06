@@ -1,18 +1,23 @@
 // app/session/invite.tsx
-import React, { useState, useEffect } from 'react';
-import {
-  View, Text, StyleSheet, ScrollView, TouchableOpacity,
-  Alert, FlatList, Modal, TextInput,
-} from 'react-native';
-import { router } from 'expo-router';
-import { SafeAreaView } from 'react-native-safe-area-context';
 import { Ionicons } from '@expo/vector-icons';
 import { LinearGradient } from 'expo-linear-gradient';
-import { useSessionStore } from '../../src/store/sessionStore';
-import { getContacts, ContactOption, sendInvitation } from '../../src/services/contactsService';
-import { Button, Input, GrokBubble } from '../../src/components/ui';
+import { router } from 'expo-router';
+import React, { useEffect, useState } from 'react';
+import {
+  Alert, FlatList, Modal,
+  ScrollView,
+  StyleSheet,
+  Text,
+  TextInput,
+  TouchableOpacity,
+  View,
+} from 'react-native';
+import { SafeAreaView } from 'react-native-safe-area-context';
 import FactCirclesIcon from '../../src/components/FactCirclesIcon';
-import { Colors, Fonts, Spacing, Radius } from '../../src/utils/theme';
+import { Button, GrokBubble, Input } from '../../src/components/ui';
+import { ContactOption, getContacts, sendInvitation } from '../../src/services/contactsService';
+import { useSessionStore } from '../../src/store/sessionStore';
+import { Colors, Fonts, Radius, Spacing } from '../../src/utils/theme';
 
 type ContactType = 'app' | 'social' | 'phone';
 

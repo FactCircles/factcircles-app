@@ -1,16 +1,20 @@
 // app/session/payment.tsx
+import { Ionicons } from '@expo/vector-icons';
+import { router } from 'expo-router';
 import React, { useState } from 'react';
 import {
-  View, Text, StyleSheet, ScrollView, TouchableOpacity, Alert, ActivityIndicator,
+  Alert,
+  ScrollView,
+  StyleSheet,
+  Text,
+  TouchableOpacity,
+  View
 } from 'react-native';
-import { router } from 'expo-router';
 import { SafeAreaView } from 'react-native-safe-area-context';
-import { Ionicons } from '@expo/vector-icons';
-import { LinearGradient } from 'expo-linear-gradient';
-import { useSessionStore } from '../../src/store/sessionStore';
-import { confirmPayment, formatPrice, calculateSplit } from '../../src/services/paymentService';
 import { Button, GrokBubble } from '../../src/components/ui';
-import { Colors, Fonts, Spacing, Radius } from '../../src/utils/theme';
+import { confirmPayment, formatPrice } from '../../src/services/paymentService';
+import { useSessionStore } from '../../src/store/sessionStore';
+import { Colors, Fonts, Radius, Spacing } from '../../src/utils/theme';
 import { PaymentSplit } from '../../src/utils/types';
 
 type SplitType = 'initiator_pays_all' | 'split_equally' | 'custom';

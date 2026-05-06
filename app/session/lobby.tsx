@@ -1,17 +1,21 @@
 // app/session/lobby.tsx
-import React, { useState, useEffect, useRef } from 'react';
-import {
-  View, Text, StyleSheet, ScrollView, TouchableOpacity, Animated,
-} from 'react-native';
-import { router } from 'expo-router';
-import { SafeAreaView } from 'react-native-safe-area-context';
 import { Ionicons } from '@expo/vector-icons';
 import { LinearGradient } from 'expo-linear-gradient';
-import { useSessionStore } from '../../src/store/sessionStore';
-import { generateOpeningStatement, generateJoinAnnouncement, summarizeParticipantReasons } from '../../src/services/grokService';
-import { Button, GrokBubble } from '../../src/components/ui';
+import { router } from 'expo-router';
+import React, { useEffect, useRef, useState } from 'react';
+import {
+  Animated,
+  ScrollView,
+  StyleSheet,
+  Text,
+  View
+} from 'react-native';
+import { SafeAreaView } from 'react-native-safe-area-context';
 import FactCirclesIcon from '../../src/components/FactCirclesIcon';
-import { Colors, Fonts, Spacing, Radius } from '../../src/utils/theme';
+import { Button, GrokBubble } from '../../src/components/ui';
+import { generateJoinAnnouncement, generateOpeningStatement } from '../../src/services/grokService';
+import { useSessionStore } from '../../src/store/sessionStore';
+import { Colors, Fonts, Radius, Spacing } from '../../src/utils/theme';
 
 export default function LobbyScreen() {
   const session = useSessionStore((s) => s.session);

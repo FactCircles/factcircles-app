@@ -1,6 +1,5 @@
 // src/services/contactsService.ts
 import * as Contacts from 'expo-contacts';
-import { Alert } from 'react-native';
 
 export interface ContactOption {
   id: string;

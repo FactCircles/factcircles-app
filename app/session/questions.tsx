@@ -1,26 +1,31 @@
 // app/session/questions.tsx
-import React, { useState, useEffect, useRef, useCallback } from 'react';
-import {
-  View, Text, StyleSheet, ScrollView, TouchableOpacity,
-  TextInput, Alert, Animated, KeyboardAvoidingView, Platform,
-} from 'react-native';
-import { router } from 'expo-router';
-import { SafeAreaView } from 'react-native-safe-area-context';
 import { Ionicons } from '@expo/vector-icons';
 import { LinearGradient } from 'expo-linear-gradient';
-import { useSessionStore } from '../../src/store/sessionStore';
+import { router } from 'expo-router';
+import React, { useEffect, useRef, useState } from 'react';
 import {
-  generateQuestionPrompt,
-  detectStoryBalloon,
-  generateContinuePrompt,
-  checkResponseComplete,
+  Alert,
+  KeyboardAvoidingView, Platform,
+  ScrollView,
+  StyleSheet,
+  Text,
+  TextInput,
+  TouchableOpacity,
+  View
+} from 'react-native';
+import { SafeAreaView } from 'react-native-safe-area-context';
+import FactCirclesIcon from '../../src/components/FactCirclesIcon';
+import { GrokBubble, PhaseIndicator } from '../../src/components/ui';
+import {
   assessChallengingPersonality,
   assessDistress,
+  checkResponseComplete,
+  detectStoryBalloon,
+  generateQuestionPrompt
 } from '../../src/services/grokService';
-import { GrokBubble, TimerDisplay, PhaseIndicator } from '../../src/components/ui';
-import FactCirclesIcon from '../../src/components/FactCirclesIcon';
-import { Colors, Fonts, Spacing, Radius } from '../../src/utils/theme';
-import { QuestionKey, Participant } from '../../src/utils/types';
+import { useSessionStore } from '../../src/store/sessionStore';
+import { Colors, Fonts, Radius, Spacing } from '../../src/utils/theme';
+import { QuestionKey } from '../../src/utils/types';
 
 const QUESTIONS: { key: QuestionKey; label: string; color: string }[] = [
   { key: 'what_happened', label: 'What happened?', color: Colors.primary },

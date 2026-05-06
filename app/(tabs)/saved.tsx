@@ -1,13 +1,18 @@
 // app/(tabs)/saved.tsx
-import React from 'react';
-import {
-  View, Text, StyleSheet, FlatList, TouchableOpacity, Share,
-} from 'react-native';
-import { SafeAreaView } from 'react-native-safe-area-context';
 import { Ionicons } from '@expo/vector-icons';
 import { LinearGradient } from 'expo-linear-gradient';
+import React from 'react';
+import {
+  FlatList,
+  Share,
+  StyleSheet,
+  Text,
+  TouchableOpacity,
+  View,
+} from 'react-native';
+import { SafeAreaView } from 'react-native-safe-area-context';
 import { useSessionStore } from '../../src/store/sessionStore';
-import { Colors, Fonts, Spacing, Radius } from '../../src/utils/theme';
+import { Colors, Fonts, Radius, Spacing } from '../../src/utils/theme';
 import { SavedSession } from '../../src/utils/types';
 
 const QUESTION_LABELS: Record<string, string> = {

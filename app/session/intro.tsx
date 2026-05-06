@@ -1,16 +1,20 @@
 // app/session/intro.tsx
-import React, { useState, useEffect } from 'react';
-import {
-  View, Text, StyleSheet, ScrollView, Animated,
-} from 'react-native';
-import { router } from 'expo-router';
-import { SafeAreaView } from 'react-native-safe-area-context';
 import { LinearGradient } from 'expo-linear-gradient';
-import { useSessionStore } from '../../src/store/sessionStore';
-import { generateJoinAnnouncement } from '../../src/services/grokService';
-import { Button, GrokBubble, PhaseIndicator } from '../../src/components/ui';
+import { router } from 'expo-router';
+import React, { useEffect, useState } from 'react';
+import {
+  Animated,
+  ScrollView,
+  StyleSheet,
+  Text,
+  View,
+} from 'react-native';
+import { SafeAreaView } from 'react-native-safe-area-context';
 import FactCirclesIcon from '../../src/components/FactCirclesIcon';
-import { Colors, Fonts, Spacing, Radius } from '../../src/utils/theme';
+import { Button, GrokBubble, PhaseIndicator } from '../../src/components/ui';
+import { generateJoinAnnouncement } from '../../src/services/grokService';
+import { useSessionStore } from '../../src/store/sessionStore';
+import { Colors, Fonts, Radius, Spacing } from '../../src/utils/theme';
 
 export default function IntroScreen() {
   const session = useSessionStore((s) => s.session);
