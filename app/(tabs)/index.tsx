@@ -7,12 +7,12 @@ import {
   ScrollView,
   Animated,
   TouchableOpacity,
+  Image,
 } from 'react-native';
 import { router } from 'expo-router';
 import { LinearGradient } from 'expo-linear-gradient';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { Ionicons } from '@expo/vector-icons';
-import FactCirclesIcon from '../../src/components/FactCirclesIcon';
 import { Button } from '../../src/components/ui';
 import { Colors, Fonts, Spacing, Radius } from '../../src/utils/theme';
 import { useSessionStore } from '../../src/store/sessionStore';
@@ -37,7 +37,7 @@ export default function HomeScreen() {
         {/* Header */}
         <LinearGradient colors={['#162D55', '#0A1628']} style={styles.header}>
           <Animated.View style={{ opacity: fadeAnim, transform: [{ translateY: slideAnim }], alignItems: 'center' }}>
-            <FactCirclesIcon size={80} rotating={false} />
+            <Image source={require('../../assets/images/splash.png')} style={{ width: 80, height: 80, resizeMode: 'contain' }} />
             <Text style={styles.heroTitle}>FactCircles</Text>
             <Text style={styles.heroSubtitle}>Live Connected</Text>
           </Animated.View>
