@@ -18,7 +18,6 @@
     "ios": {
       "supportsTablet": true,
       "bundleIdentifier": "com.factcircles.app",
-      "buildNumber": "1",
       "infoPlist": {
         "NSContactsUsageDescription": "FactCircles needs access to your contacts to invite participants to a session.",
         "NSCameraUsageDescription": "FactCircles needs camera access for video sessions.",
