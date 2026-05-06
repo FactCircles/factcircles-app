@@ -39,5 +39,5 @@ jobs:
         run: eas build --platform ios --profile production --non-interactive
 
       - name: Submit to App Store
-        if: ${{ inputs.submit == 'true' || github.event_name == 'push' }}
+        if: ${{ inputs.submit == true || github.event_name == 'push' }}
         run: eas submit --platform ios --profile production --non-interactive --latest
