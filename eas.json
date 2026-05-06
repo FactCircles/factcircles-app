@@ -12,7 +12,7 @@
       }
     },
     "preview": {
-      "distribution": "internal",
+      "distribution": "store",
       "ios": {
         "simulator": false,
         "resourceClass": "m-medium"
@@ -30,11 +30,18 @@
     }
   },
   "submit": {
+    "preview": {
+      "ios": {
+        "appleId": "john@factcircles.com",
+        "ascAppId": "6759204640",
+        "appleTeamId": "8S5M6FGH6U"
+      }
+    },
     "production": {
       "ios": {
-        "appleId": "YOUR_APPLE_ID@email.com",
-        "ascAppId": "YOUR_APP_STORE_CONNECT_APP_ID",
-        "appleTeamId": "YOUR_APPLE_TEAM_ID",
+        "appleId": "john@factcircles.com",
+        "ascAppId": "6759204640",
+        "appleTeamId": "8S5M6FGH6U",
         "metadataPath": "./store-metadata/ios"
       },
       "android": {
